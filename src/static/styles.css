@@ -74,6 +74,122 @@ section h3 {
   margin-bottom: 8px;
 }
 
+.participants {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid #dfe3eb;
+}
+
+.participants .participants-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 4px 2px;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #1a237e;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.participants .participants-toggle::after {
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  content: "";
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+
+.participants .participants-toggle[aria-expanded="true"]::after {
+  transform: rotate(225deg);
+}
+
+.participants .participants-toggle:hover {
+  background-color: #eef3f9;
+}
+
+.participants .participants-toggle:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.participants-content {
+  padding-top: 10px;
+}
+
+.participants-content[hidden] {
+  display: none;
+}
+
+.participants ul {
+  display: grid;
+  gap: 6px;
+  list-style: none;
+}
+
+.participants li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 38px;
+  padding: 4px 5px 4px 10px;
+  border: 1px solid #dbe5f0;
+  border-radius: 4px;
+  background-color: #f2f7fb;
+  color: #344054;
+  font-size: 14px;
+}
+
+.participants li span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.participants .remove-participant {
+  display: inline-grid;
+  flex: 0 0 30px;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: transparent;
+  color: #c62828;
+  font-size: 22px;
+  line-height: 1;
+}
+
+.participants .remove-participant:hover {
+  border-color: #ef9a9a;
+  background-color: #ffebee;
+}
+
+.participants .remove-participant:focus-visible {
+  outline: 2px solid #c62828;
+  outline-offset: 2px;
+}
+
+.participants .remove-participant:disabled {
+  cursor: wait;
+  opacity: 0.5;
+}
+
+.participants .participants-empty {
+  margin: 0;
+  color: #667085;
+  font-size: 14px;
+  font-style: italic;
+}
+
 .form-group {
   margin-bottom: 15px;
 }
